@@ -1,14 +1,15 @@
 # Teaching Tools
 
-> **Version:** 1.0
-> **Last updated:** 7 October 2026
+> **Version:** 1.1
+> **Last updated:** 9 October 2026
 
-Two teaching pages by Dr Marco Scalvini (University of the Arts London), published with GitHub Pages. Each page is a single self-contained HTML file that opens in any browser and loads its fonts from Google Fonts.
+Three teaching pages by Dr Marco Scalvini (University of the Arts London), published with GitHub Pages. Each page is a single self-contained HTML file that opens in any browser and loads its fonts from Google Fonts.
 
 | Page | Address | File |
 |---|---|---|
 | Dissertation Examples | https://scalvini.eu/teaching-tools/dissertation-examples/ | `dissertation-examples/index.html` |
 | Brand Governance | https://scalvini.eu/teaching-tools/brand-governance/ | `brand-governance/index.html` |
+| Thesis Writing | https://scalvini.eu/teaching-tools/thesis-writing/ | `thesis-writing/index.html` |
 
 ## Dissertation Examples
 
@@ -34,6 +35,17 @@ The page accompanies the article "Brand governance in the platform economy: From
 | Seminar | Exercise |
 
 The tables and the quotations come from the published version of the article, with its page and table numbers, and each quotation was checked word for word against that version. The links were checked on 7 October 2026, and the worksheet runs in the browser without saving any answer.
+
+## Thesis Writing
+
+The page guides students who write a BA or master's thesis in media and communication through the writing of the thesis, beginning with the introduction. It sets out the introduction in seven steps, from the motivation for the topic to the structure of the thesis, following the curator's guidelines for the thesis.
+
+- For each step, the guidance, a passage from a worked example of an imagined thesis and an example from the introduction of "Brand governance in the platform economy" (Scalvini, 2026), with its page number.
+- For each step, two phrases that students can add to their draft and adapt, adapted from the [Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/) of the University of Manchester, with a link to the matching heading of the Phrasebank.
+- A draft box for each step, and a section that joins the drafts into one introduction, which students can copy or download as a text file. The page does not save the drafts.
+- The worked example joined into one introduction of four paragraphs, with its references.
+
+The quotations in the worked example and in the published examples were checked word for word against the published versions of their sources, and the links were checked on 9 October 2026. The worked example was written for the page, so students should not cite it.
 
 ## Notes
 

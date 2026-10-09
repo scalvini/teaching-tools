@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Thesis Writing</title>
+<meta name="description" content="Guidance, examples, adaptable phrases and a draft box for each of the seven steps of the introduction to a thesis in media and communication.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+<style>
+/* Single light theme on white, matching the Brand Governance and Dissertation Examples pages.
+   Layout: a masthead, a row of seven step links that shows which steps have a draft,
+   the seven steps in order (guidance, two examples, phrases, a draft box), and the assembled introduction. */
+:root {
+  --bg: #FFFFFF;
+  --panel: #FFFFFF;
+  --tint: #F4F6F5;
+  --ink: #101413;
+  --ink-2: #2E3633;
+  --ink-3: #4F5955;
+  --rule: #CBD2CE;
+  --rule-2: #E3E7E5;
+  --accent: #174E70;
+  --accent-deep: #0F3C57;
+  --accent-soft: #E6EFF5;
+  --on-accent: #FFFFFF;
+  --focus: #B86E00;
+  --ph-bg: #FBF1E1;
+  --ph-ink: #7E4800;
+  --f-sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 72px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.eyebrow { font-family: var(--f-mono); font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-3); }
+
+/* masthead */
+.masthead { display: grid; gap: 14px; padding-bottom: 22px; border-bottom: 1px solid var(--rule); }
+h1 { margin: 0; font-size: clamp(30px, 4.6vw, 48px); line-height: 1.02; font-weight: 760; font-stretch: 82%; letter-spacing: -0.01em; text-wrap: balance; }
+.lede { margin: 0; max-width: 70ch; color: var(--ink-2); font-size: 18px; line-height: 1.5; }
+.cite { margin: 0; max-width: 80ch; color: var(--ink-3); font-size: 15px; }
+
+/* step links */
+.snav { display: grid; gap: 10px; padding: 16px 0 18px; border-bottom: 1px solid var(--rule); }
+.snav .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.count { font-size: 15px; color: var(--ink-2); margin: 0; }
+.count b { font-variant-numeric: tabular-nums; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.schip { display: inline-flex; align-items: center; gap: 7px; font: 500 14px/1 var(--f-sans); color: var(--ink); text-decoration: none; background: var(--panel); border: 1px solid var(--rule); border-radius: 999px; padding: 7px 11px 7px 8px; }
+.schip:hover { border-color: var(--accent); }
+.schip .sn { font: 500 12.5px/1 var(--f-mono); color: var(--accent); }
+.schip .sdot { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--rule); background: var(--panel); }
+.schip.done { background: var(--accent-soft); border-color: var(--accent); }
+.schip.done .sdot { background: var(--accent); border-color: var(--accent); }
+
+/* chapter */
+.chapter { display: grid; gap: 12px; padding-top: 26px; }
+h2 { margin: 0; font-size: 26px; line-height: 1.15; font-weight: 740; font-stretch: 85%; text-wrap: balance; }
+.intro { margin: 0; max-width: 78ch; color: var(--ink-2); }
+.methodbox { margin: 0; max-width: 80ch; padding: 14px 16px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; color: var(--ink); font-size: 16px; }
+.methodbox b { font: 600 12px/1 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 6px; }
+.methodbox p { margin: 0; }
+.methodbox p + p { margin-top: 8px; }
+
+/* steps */
+.steps { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.step { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 0 14px; padding: 22px 0 26px; border-bottom: 1px solid var(--rule-2); scroll-margin-top: 12px; }
+.step .mn { font-size: 15px; line-height: 2; color: var(--accent); }
+.sbody { display: grid; gap: 16px; min-width: 0; }
+.step h3 { margin: 0; font-size: 22px; line-height: 1.25; font-weight: 720; font-stretch: 88%; text-wrap: balance; }
+.step h3 .q { display: block; margin-top: 4px; font-family: var(--f-serif); font-style: italic; font-weight: 400; font-stretch: 100%; font-size: 18px; color: var(--ink-2); }
+.stag { display: inline-block; margin-top: 8px; font: 500 12px/1 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); border-radius: 3px; padding: 5px 7px; }
+.guide { margin: 0; max-width: 78ch; color: var(--ink-2); }
+.lab { display: block; font: 500 12px/1.3 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; }
+.exgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+.ex { min-width: 0; padding: 14px 16px; background: var(--tint); border: 1px solid var(--rule-2); border-radius: 6px; }
+.wex { margin: 0; color: var(--ink); }
+.essay { display: grid; gap: 14px; max-width: 82ch; padding: 20px 22px; background: var(--panel); border: 1px solid var(--rule-2); border-radius: 6px; }
+.essay h3 { margin: 0; font-size: 18px; font-weight: 700; }
+.essay p { margin: 0; font-family: var(--f-serif); font-size: 17px; line-height: 1.65; color: var(--ink); }
+.refs { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 15px; color: var(--ink-2); }
+.refs li { padding-left: 1.6em; text-indent: -1.6em; overflow-wrap: anywhere; }
+blockquote.quote { margin: 0; font-family: var(--f-serif); font-size: 17px; line-height: 1.6; color: var(--ink); padding-left: 14px; border-left: 3px solid var(--accent); }
+.where { font-family: var(--f-mono); font-size: 13px; color: var(--ink-3); white-space: nowrap; }
+.exnote { margin: 10px 0 0; font-size: 15px; color: var(--ink-2); }
+.phrases { min-width: 0; }
+.plist { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.phr { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 14px; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); }
+.ptext { margin: 0; flex: 1 1 380px; min-width: 0; color: var(--ink); }
+.ph { font-family: var(--f-mono); font-size: 0.86em; color: var(--ph-ink); background: var(--ph-bg); border-radius: 3px; padding: 1px 4px; }
+.credit { margin: 8px 0 0; font-size: 14px; color: var(--ink-3); }
+.draft { display: grid; gap: 0; }
+textarea { width: 100%; min-height: 108px; resize: vertical; font: 16px/1.5 var(--f-sans); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 5px; padding: 10px 12px; }
+textarea::placeholder { color: var(--ink-3); font-style: italic; }
+textarea:focus { border-color: var(--accent); }
+
+/* buttons */
+.btn { appearance: none; font: 600 15px/1 var(--f-sans); color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 5px; padding: 9px 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.btn.small { font-size: 14px; padding: 7px 10px; }
+.btn.solid { background: var(--accent); color: var(--on-accent); }
+.btn:hover { background: var(--accent-soft); }
+.btn.solid:hover { background: var(--accent-deep); }
+.btn.warn { color: var(--focus); border-color: var(--focus); }
+
+/* assembled introduction */
+.sheet { display: grid; gap: 16px; padding: 18px; border: 1px solid var(--rule-2); border-radius: 6px; background: var(--tint); }
+.outline { display: grid; gap: 0; background: var(--panel); border: 1px solid var(--rule-2); border-radius: 6px; padding: 4px 16px; }
+.oitem { padding: 12px 0; border-bottom: 1px solid var(--rule-2); }
+.oitem:last-child { border-bottom: 0; }
+.oitem h3 { margin: 0 0 4px; font-size: 16px; font-weight: 700; }
+.oitem h3 .mono { color: var(--accent); margin-right: 8px; font-weight: 500; }
+.oitem p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--ink); max-width: 80ch; }
+.oitem p.empty { color: var(--ink-3); font-style: italic; }
+.acts { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.status { font-size: 14.5px; color: var(--accent); margin: 0; min-height: 1.4em; }
+.remind { font-size: 14.5px; color: var(--ink-2); margin: 0; }
+.hint { font-size: 14.5px; color: var(--ink-3); margin: 0; }
+footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--ink-3); display: grid; gap: 6px; }
+footer a { overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .wrap { padding-inline: 16px; }
+  .step { grid-template-columns: minmax(0, 1fr); gap: 6px 0; }
+  .step .mn { line-height: 1.4; }
+  .exgrid { grid-template-columns: minmax(0, 1fr); }
+  .lede { font-size: 17px; }
+}
+@media print {
+  .snav, .phrases button, .acts, .status, .remind, footer { display: none !important; }
+  .step { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="eyebrow">Writing guide &middot; state on 9 October 2026</div>
+    <h1>Thesis Writing</h1>
+    <p class="lede">I prepared this page for students who write a BA or master&rsquo;s thesis in media and communication. On this page you can plan the introduction in seven steps, each with guidance, a worked example and a published example, phrases that you can adapt and a box for your own draft. I will add the other chapters of the thesis in the same format.</p>
+    <p class="cite">The guidance follows my guidelines for the introduction of a thesis in media and communication. The published examples come from the introduction of my article &ldquo;Brand governance in the platform economy&rdquo; (Scalvini, 2026), with page numbers from the version published in <i>New Media &amp; Society</i>. <a href="https://doi.org/10.1177/14614448261475463">doi.org/10.1177/14614448261475463</a></p>
+  </header>
+
+  <nav class="snav" aria-label="The seven steps of the introduction">
+    <div class="top"><span class="eyebrow">Chapter 1 &middot; Introduction</span><p class="count" id="count" aria-live="polite"><b>0</b> of 7 steps drafted</p></div>
+    <div class="chips"><a class="schip" href="#motivation" id="chip-1" data-n="1"><span class="sn">1</span>Motivation<span class="sdot" aria-hidden="true"></span></a><a class="schip" href="#question" id="chip-2" data-n="2"><span class="sn">2</span>Question<span class="sdot" aria-hidden="true"></span></a><a class="schip" href="#literature" id="chip-3" data-n="3"><span class="sn">3</span>Literature<span class="sdot" aria-hidden="true"></span></a><a class="schip" href="#gap" id="chip-4" data-n="4"><span class="sn">4</span>Gap<span class="sdot" aria-hidden="true"></span></a><a class="schip" href="#relevance" id="chip-5" data-n="5"><span class="sn">5</span>Relevance<span class="sdot" aria-hidden="true"></span></a><a class="schip" href="#objective" id="chip-6" data-n="6"><span class="sn">6</span>Objective<span class="sdot" aria-hidden="true"></span></a><a class="schip" href="#expectations" id="chip-7" data-n="7"><span class="sn">7</span>Expectations<span class="sdot" aria-hidden="true"></span></a></div>
+  </nav>
+
+  <section class="chapter" aria-labelledby="h-intro">
+    <h2 id="h-intro">The introduction in seven steps</h2>
+    <p class="intro">In the introduction, you define your research topic and explain its significance for media studies, in particular for the study of advertising and promotional communication. You also place your research within the existing literature and identify the gap that it addresses, which is where you establish the originality of your project. The seven steps follow the outline in my guidelines, from the motivation for the topic to the structure of the thesis.</p>
+    <div class="methodbox"><b>About the worked example</b>
+      <p>In the worked example, I follow one imagined thesis through the seven steps, so that you can see how the steps connect. In the thesis, a student analyses the posts that four beauty brands published on Instagram for International Women&rsquo;s Day in 2022 and in 2025, before and after the withdrawal of global brands from DEI initiatives. I wrote the example for this page, so do not cite it, although its references are real and I checked each quotation against its source.</p>
+    </div>
+    <div class="methodbox"><b>Using the phrases</b>
+      <p>Each step offers two phrases that you can add to your draft and adapt, by replacing the words in square brackets with the terms of your own project. The phrases are adapted from the <a href="https://www.phrasebank.manchester.ac.uk/introducing-work/">Academic Phrasebank</a> of the University of Manchester, which offers more phrases for each step.</p>
+      <p>Following a survey of academics by Davis and Morley (2013), the <a href="https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/">Phrasebank</a> reports that a reused phrase is acceptable when it has no original construction and does not express the point of view of another writer. Acceptability also declines beyond about nine words, and the phrase should contain no more than four generic content words.</p>
+    </div>
+    <ol class="steps">
+    <li class="step" id="motivation">
+      <span class="mn mono">01</span>
+      <div class="sbody">
+        <h3>Motivation<span class="q">Why is the topic important?</span> <span class="stag">So What test</span></h3>
+        <p class="guide">Start by explaining why you chose the topic and why this area of advertising or promotional communication needs further research. Show its relevance to media studies, and in particular to the ways in which advertising shapes cultural and ethical norms. For instance, you might examine how brands engage with social movements such as Black Lives Matter, or how they commodify activism. This is the So What test, which asks why the topic is important today.</p>
+        <div class="exgrid">
+          <div class="ex">
+            <span class="lab">Worked example</span>
+            <p class="wex">Several global brands have withdrawn from initiatives such as Diversity, Equity, and Inclusion (DEI) in recent years, in what Scalvini (2026, pp. 2, 23) calls the “post-2022 DEI retrenchment”. These withdrawals concern advertising directly, since marketing “simultaneously enables the visibility and erasure” of feminist and Black social justice activist issues (Sobande, 2020, p. 2723).</p>
+          </div>
+          <div class="ex">
+            <span class="lab">Example from a published article</span>
+            <blockquote class="quote">“Recent corporate withdrawals from initiatives such as Diversity, Equity, and Inclusion (DEI) are frequently analysed as lapses in corporate commitment or departures from stated values (Rim et al., 2020; Villagra et al., 2021).” <span class="where">(Scalvini, 2026, p. 2)</span></blockquote>
+            <p class="exnote">I open with a recent development, the withdrawal of corporations from DEI initiatives, and with the way in which earlier studies interpret it.</p>
+          </div>
+        </div>
+        <div class="phrases">
+          <span class="lab">Phrases you can adapt</span>
+          <ul class="plist"><li class="phr"><p class="ptext">Since <span class="ph">[year]</span>, <span class="ph">[brands]</span> have <span class="ph">[adopted X]</span>, and <span class="ph">[audiences or activists]</span> have questioned whether <span class="ph">[this practice]</span> <span class="ph">[does Z]</span>.</p><button class="btn small" type="button" data-target="draft-1" data-insert="Since [year], [brands] have [adopted X], and [audiences or activists] have questioned whether [this practice] [does Z]." aria-label="Add phrase 1 of step 1 to your draft">Add to my draft</button></li><li class="phr"><p class="ptext">In <span class="ph">[year]</span>, <span class="ph">[group]</span> responded to <span class="ph">[brand]</span>’s <span class="ph">[campaign]</span> by <span class="ph">[action]</span>, and since then <span class="ph">[journalists or regulators]</span> have treated X as a public question.</p><button class="btn small" type="button" data-target="draft-1" data-insert="In [year], [group] responded to [brand]’s [campaign] by [action], and since then [journalists or regulators] have treated X as a public question." aria-label="Add phrase 2 of step 1 to your draft">Add to my draft</button></li></ul>
+          <p class="credit">Phrases adapted from the <a href="https://www.phrasebank.manchester.ac.uk/introducing-work/#:~:text=Establishing%20the%20importance%20of%20the%20topic%20for%20the%20world%20or%20society">Academic Phrasebank</a>, University of Manchester, where you can find more for this step.</p>
+        </div>
+        <label class="draft" for="draft-1"><span class="lab">Your draft for this step</span>
+          <textarea id="draft-1" rows="5" placeholder="Why is your topic important today?"></textarea>
+        </label>
+      </div>
+    </li>
+    <li class="step" id="question">
+      <span class="mn mono">02</span>
+      <div class="sbody">
+        <h3>Thesis question<span class="q">What is your central research question?</span></h3>
+        <p class="guide">State the central research question that guides your investigation. The question should reflect an interpretative approach, which calls for a detailed analysis rather than a simple answer. One question of this kind is “In what ways do promotional communications exploit performative activism to engage digital audiences?”</p>
+        <div class="exgrid">
+          <div class="ex">
+            <span class="lab">Worked example</span>
+            <p class="wex">In this thesis, I ask how four beauty brands represented women in the posts that they published on Instagram for International Women’s Day in 2022 and in 2025. I examine which women appear in these posts before and after the retrenchment, and on what terms they appear.</p>
+          </div>
+          <div class="ex">
+            <span class="lab">Example from a published article</span>
+            <blockquote class="quote">“From this perspective, the central question is not whether advocacy serves brand positioning, but how it structures the moral legibility of claims within platformed public spheres.” <span class="where">(Scalvini, 2026, p. 3)</span></blockquote>
+            <p class="exnote">I state the central question in one sentence, and I then divide it into two research questions.</p>
+          </div>
+        </div>
+        <div class="phrases">
+          <span class="lab">Phrases you can adapt</span>
+          <ul class="plist"><li class="phr"><p class="ptext">In this thesis, I ask how <span class="ph">[brands]</span> <span class="ph">[do X]</span> in <span class="ph">[context]</span>, and with what consequences for <span class="ph">[group]</span>.</p><button class="btn small" type="button" data-target="draft-2" data-insert="In this thesis, I ask how [brands] [do X] in [context], and with what consequences for [group]." aria-label="Add phrase 1 of step 2 to your draft">Add to my draft</button></li><li class="phr"><p class="ptext">I examine in what ways <span class="ph">[organisations]</span> <span class="ph">[use X]</span> to <span class="ph">[achieve Y]</span>.</p><button class="btn small" type="button" data-target="draft-2" data-insert="I examine in what ways [organisations] [use X] to [achieve Y]." aria-label="Add phrase 2 of step 2 to your draft">Add to my draft</button></li></ul>
+          <p class="credit">Phrases adapted from the <a href="https://www.phrasebank.manchester.ac.uk/introducing-work/#:~:text=Stating%20the%20focus%2C%20aim%2C%20or%20argument%20of%20a%20short%20paper">Academic Phrasebank</a>, University of Manchester, where you can find more for this step.</p>
+        </div>
+        <label class="draft" for="draft-2"><span class="lab">Your draft for this step</span>
+          <textarea id="draft-2" rows="5" placeholder="What is your central research question?"></textarea>
+        </label>
+      </div>
+    </li>
+    <li class="step" id="literature">
+      <span class="mn mono">03</span>
+      <div class="sbody">
+        <h3>Literature review<span class="q">What has been established?</span></h3>
+        <p class="guide">Write a brief review of the research on your topic, and summarise the key findings and debates in media studies on advertising and on your specific area, such as brand activism or ethical branding. With the review, you place your research within the field and acknowledge what studies have already established, and you show that you know the current debates in media studies. For instance, you could refer to studies that criticise the role of brands in movements such as Blackout Tuesday, or to studies of performative activism and of the ethics of visibility in advertising. You can find sources in the <a href="https://docs.google.com/spreadsheets/d/1spT3EZzT8keeBajEoBvBNQqwYrrQOfwqD4b28kCIslw/edit?usp=sharing">List of Journals</a>.</p>
+        <div class="exgrid">
+          <div class="ex">
+            <span class="lab">Worked example</span>
+            <p class="wex">Studies of brand activism have asked whether campaigns are authentic, and Vredenburg et al. (2020, p. 444) describe authentic brand activism as the match of “activist messaging, purpose, and values with prosocial corporate practice”. In a critical study of “femvertising”, Sobande (2020, p. 2723) identifies the “racialised and gendered subject positions” that brands use in this advertising.</p>
+          </div>
+          <div class="ex">
+            <span class="lab">Example from a published article</span>
+            <blockquote class="quote">“Research remains organised around a functionalist logic that divides into intent-oriented interrogations of authenticity and “woke-washing” (Becker-Olsen et al., 2006; Vredenburg et al., 2020) and impact-oriented assessments of reputational and stakeholder outcomes (Kim and Meganck, 2025; Wagner et al., 2020).” <span class="where">(Scalvini, 2026, p. 3)</span></blockquote>
+            <p class="exnote">I group the studies into two strands, so that the reader sees how the research is divided before I state the gap.</p>
+          </div>
+        </div>
+        <div class="phrases">
+          <span class="lab">Phrases you can adapt</span>
+          <ul class="plist"><li class="phr"><p class="ptext">Studies of X have examined how <span class="ph">[organisations]</span> <span class="ph">[do Y]</span>, with particular attention to <span class="ph">[Z]</span> (Author, year, p. #).</p><button class="btn small" type="button" data-target="draft-3" data-insert="Studies of X have examined how [organisations] [do Y], with particular attention to [Z] (Author, year, p. #)." aria-label="Add phrase 1 of step 3 to your draft">Add to my draft</button></li><li class="phr"><p class="ptext">Studies of X agree that <span class="ph">[A]</span>, but they disagree on whether <span class="ph">[B]</span> (Author, year, p. #; Author, year, p. #).</p><button class="btn small" type="button" data-target="draft-3" data-insert="Studies of X agree that [A], but they disagree on whether [B] (Author, year, p. #; Author, year, p. #)." aria-label="Add phrase 2 of step 3 to your draft">Add to my draft</button></li></ul>
+          <p class="credit">Phrases adapted from the <a href="https://www.phrasebank.manchester.ac.uk/introducing-work/#:~:text=Referring%20to%20previous%20work%20to%20establish%20what%20is%20already%20known">Academic Phrasebank</a>, University of Manchester, where you can find more for this step.</p>
+        </div>
+        <label class="draft" for="draft-3"><span class="lab">Your draft for this step</span>
+          <textarea id="draft-3" rows="5" placeholder="What have earlier studies established about your topic?"></textarea>
+        </label>
+      </div>
+    </li>
+    <li class="step" id="gap">
+      <span class="mn mono">04</span>
+      <div class="sbody">
+        <h3>Gap in the literature<span class="q">What questions remain?</span></h3>
+        <p class="guide">After the review, identify the gap that your research will address, namely the questions that remain unanswered and the aspects of advertising and promotional communication that studies have not examined. At this point you establish the originality of your project. For instance, studies of brand activism may not have examined how these campaigns affect the formation of consumer identity on digital platforms, or how audiences in different regions receive the ethical messages of global brands.</p>
+        <div class="exgrid">
+          <div class="ex">
+            <span class="lab">Worked example</span>
+            <p class="wex">A significant gap remains, however, in the study of femvertising after the retrenchment, since both studies were published in 2020 and analyse earlier campaigns. In the conclusion of his article, Scalvini (2026, p. 24) calls for longitudinal research “tracking the consequences of the post-2022 DEI retrenchment”.</p>
+          </div>
+          <div class="ex">
+            <span class="lab">Example from a published article</span>
+            <blockquote class="quote">“A significant gap remains, however. Scholarship has yet to articulate how this normative power interacts with the affordances of networked publics (Boyd, 2010; Davis and Chouinard, 2016) to produce specific regimes of visibility (Bucher, 2018).” <span class="where">(Scalvini, 2026, p. 3)</span></blockquote>
+            <p class="exnote">I state that a gap remains, and in the next sentence I specify what earlier studies have not yet explained.</p>
+          </div>
+        </div>
+        <div class="phrases">
+          <span class="lab">Phrases you can adapt</span>
+          <ul class="plist"><li class="phr"><p class="ptext">Studies of X analyse <span class="ph">[campaigns or texts]</span>, whereas few studies examine how <span class="ph">[audiences]</span> <span class="ph">[respond to them]</span>.</p><button class="btn small" type="button" data-target="draft-4" data-insert="Studies of X analyse [campaigns or texts], whereas few studies examine how [audiences] [respond to them]." aria-label="Add phrase 1 of step 4 to your draft">Add to my draft</button></li><li class="phr"><p class="ptext">A significant gap remains, however, in the study of how <span class="ph">[organisations]</span> <span class="ph">[do Y]</span> in <span class="ph">[context]</span>.</p><button class="btn small" type="button" data-target="draft-4" data-insert="A significant gap remains, however, in the study of how [organisations] [do Y] in [context]." aria-label="Add phrase 2 of step 4 to your draft">Add to my draft</button></li></ul>
+          <p class="credit">Phrases adapted from the <a href="https://www.phrasebank.manchester.ac.uk/introducing-work/#:~:text=Explaining%20the%20inadequacies%20of%20previous%20studies">Academic Phrasebank</a>, University of Manchester, where you can find more for this step.</p>
+        </div>
+        <label class="draft" for="draft-4"><span class="lab">Your draft for this step</span>
+          <textarea id="draft-4" rows="5" placeholder="Which question have earlier studies left unanswered?"></textarea>
+        </label>
+      </div>
+    </li>
+    <li class="step" id="relevance">
+      <span class="mn mono">05</span>
+      <div class="sbody">
+        <h3>Relevance and originality<span class="q">How does your research contribute?</span></h3>
+        <p class="guide">Explain why your research is relevant and why it is necessary now. State what your project contributes to the understanding of contemporary advertising and promotional communication, since this is where you demonstrate its originality. For instance, your study may provide new knowledge about the relation between promotional communication and social justice, or a critical analysis of how global brands construct and commodify ethical narratives.</p>
+        <div class="exgrid">
+          <div class="ex">
+            <span class="lab">Worked example</span>
+            <p class="wex">The originality of the thesis is that I compare the posts of the same brands before and after the retrenchment, so that any change in the representation of women becomes observable. The comparison is also relevant to advertising practice, since practitioners can use it to see whether the withdrawal from DEI changes the campaigns that they produce.</p>
+          </div>
+          <div class="ex">
+            <span class="lab">Example from a published article</span>
+            <blockquote class="quote">“The primary theoretical contribution of this article is the distinction between political recognition and regulatory recognition as modes through which brand governance operates within the platform economy.” <span class="where">(Scalvini, 2026, pp. 3 to 4)</span></blockquote>
+            <p class="exnote">I name the contribution as a distinction between two concepts, which I develop in the theoretical framework.</p>
+          </div>
+        </div>
+        <div class="phrases">
+          <span class="lab">Phrases you can adapt</span>
+          <ul class="plist"><li class="phr"><p class="ptext">This thesis is relevant now because <span class="ph">[organisations or audiences]</span> have <span class="ph">[changed practice]</span> since <span class="ph">[event or year]</span>.</p><button class="btn small" type="button" data-target="draft-5" data-insert="This thesis is relevant now because [organisations or audiences] have [changed practice] since [event or year]." aria-label="Add phrase 1 of step 5 to your draft">Add to my draft</button></li><li class="phr"><p class="ptext">The originality of the thesis is that I apply <span class="ph">[concept]</span> to <span class="ph">[case or corpus]</span>, which earlier studies of X have not examined.</p><button class="btn small" type="button" data-target="draft-5" data-insert="The originality of the thesis is that I apply [concept] to [case or corpus], which earlier studies of X have not examined." aria-label="Add phrase 2 of step 5 to your draft">Add to my draft</button></li></ul>
+          <p class="credit">Phrases adapted from the <a href="https://www.phrasebank.manchester.ac.uk/introducing-work/#:~:text=Explaining%20the%20significance%20of%20the%20current%20study">Academic Phrasebank</a>, University of Manchester, where you can find more for this step.</p>
+        </div>
+        <label class="draft" for="draft-5"><span class="lab">Your draft for this step</span>
+          <textarea id="draft-5" rows="5" placeholder="Why is your research relevant now, and what does it contribute?"></textarea>
+        </label>
+      </div>
+    </li>
+    <li class="step" id="objective">
+      <span class="mn mono">06</span>
+      <div class="sbody">
+        <h3>Objective<span class="q">What are you trying to achieve?</span></h3>
+        <p class="guide">Define the objective of your thesis, which may be to examine a phenomenon or a theoretical concept, or to analyse advertising strategies critically. For example, you might aim to examine how brands put selective empathy into practice in their messages. You might also aim to criticise the ways in which brands use social justice movements for promotional gain, without a substantial commitment to the causes that they support.</p>
+        <div class="exgrid">
+          <div class="ex">
+            <span class="lab">Worked example</span>
+            <p class="wex">My objective is to extend the distinction between “political recognition and regulatory recognition” (Scalvini, 2026, p. 3) to femvertising after the retrenchment. I therefore examine whether the brands address women as “political claimants” or as “objects of empathy” (Scalvini, 2026, p. 23).</p>
+          </div>
+          <div class="ex">
+            <span class="lab">Example from a published article</span>
+            <blockquote class="quote">“Rather than asking whether campaigns express authenticity or achieve impact, the critical task is to examine how brand governance defines the conditions of visibility (Brighenti, 2007), determining which grievances can appear, on what terms, and within which grammars of legitimacy.” <span class="where">(Scalvini, 2026, p. 3)</span></blockquote>
+            <p class="exnote">I state the objective in contrast with the question that earlier studies ask, within a single sentence.</p>
+          </div>
+        </div>
+        <div class="phrases">
+          <span class="lab">Phrases you can adapt</span>
+          <ul class="plist"><li class="phr"><p class="ptext">My objective is to analyse how <span class="ph">[brands]</span> <span class="ph">[do Y]</span>, and to extend <span class="ph">[concept]</span> to <span class="ph">[context]</span>.</p><button class="btn small" type="button" data-target="draft-6" data-insert="My objective is to analyse how [brands] [do Y], and to extend [concept] to [context]." aria-label="Add phrase 1 of step 6 to your draft">Add to my draft</button></li><li class="phr"><p class="ptext">I also aim to explain why <span class="ph">[organisations]</span> <span class="ph">[do Y]</span>, and to assess the consequences for <span class="ph">[group]</span>.</p><button class="btn small" type="button" data-target="draft-6" data-insert="I also aim to explain why [organisations] [do Y], and to assess the consequences for [group]." aria-label="Add phrase 2 of step 6 to your draft">Add to my draft</button></li></ul>
+          <p class="credit">Phrases adapted from the <a href="https://www.phrasebank.manchester.ac.uk/introducing-work/#:~:text=Stating%20the%20purpose%20of%20the%20current%20research">Academic Phrasebank</a>, University of Manchester, where you can find more for this step.</p>
+        </div>
+        <label class="draft" for="draft-6"><span class="lab">Your draft for this step</span>
+          <textarea id="draft-6" rows="5" placeholder="What is the objective of your thesis?"></textarea>
+        </label>
+      </div>
+    </li>
+    <li class="step" id="expectations">
+      <span class="mn mono">07</span>
+      <div class="sbody">
+        <h3>Expectations<span class="q">What will the thesis cover?</span></h3>
+        <p class="guide">Close the introduction with a brief outline of the rest of the thesis. Explain how you structure the thesis and how each chapter contributes to the answer to your central research question. You can mention your theoretical framework and your method, such as discourse analysis or thematic analysis, and give a brief overview of your case studies or data sources, such as social media campaigns or advertisements.</p>
+        <div class="exgrid">
+          <div class="ex">
+            <span class="lab">Worked example</span>
+            <p class="wex">In Chapter 2, I set out the studies of femvertising and the theory of recognition. In Chapter 3, I explain how I selected the posts and how I apply semiotic analysis to their images and captions. In Chapter 4, I present and discuss the findings, and in Chapter 5, I state my conclusions and the limits of the thesis.</p>
+          </div>
+          <div class="ex">
+            <span class="lab">Example from a published article</span>
+            <blockquote class="quote">“Drawing on a sociosemiotic analysis of global advocacy campaigns from 2017 to 2022, the study identifies three techno-normative strategies through which this governance operates and examines how they interact with platform affordances to produce regulatory rather than political recognition.” <span class="where">(Scalvini, 2026, p. 4)</span></blockquote>
+            <p class="exnote">An article has no chapters, so I close the introduction with the method and the findings. In a thesis, you also give the order of the chapters.</p>
+          </div>
+        </div>
+        <div class="phrases">
+          <span class="lab">Phrases you can adapt</span>
+          <ul class="plist"><li class="phr"><p class="ptext">I analyse <span class="ph">[number]</span> <span class="ph">[campaigns or posts]</span> from <span class="ph">[period]</span> through <span class="ph">[method]</span>.</p><button class="btn small" type="button" data-target="draft-7" data-insert="I analyse [number] [campaigns or posts] from [period] through [method]." aria-label="Add phrase 1 of step 7 to your draft">Add to my draft</button></li><li class="phr"><p class="ptext">In Chapter 2, I set out the theoretical framework and in Chapter 3 the method, before presenting and discussing the findings in Chapter 4 and concluding in Chapter 5.</p><button class="btn small" type="button" data-target="draft-7" data-insert="In Chapter 2, I set out the theoretical framework and in Chapter 3 the method, before presenting and discussing the findings in Chapter 4 and concluding in Chapter 5." aria-label="Add phrase 2 of step 7 to your draft">Add to my draft</button></li></ul>
+          <p class="credit">Phrases adapted from the <a href="https://www.phrasebank.manchester.ac.uk/introducing-work/#:~:text=Outlining%20the%20structure%20of%20the%20paper%20or%20dissertation">Academic Phrasebank</a>, University of Manchester, where you can find more for this step.</p>
+        </div>
+        <label class="draft" for="draft-7"><span class="lab">Your draft for this step</span>
+          <textarea id="draft-7" rows="5" placeholder="What will the reader find in each chapter?"></textarea>
+        </label>
+      </div>
+    </li>
+    </ol>
+  </section>
+
+  <section class="chapter" aria-labelledby="h-worked" id="worked-example">
+    <h2 id="h-worked">The worked example as one introduction</h2>
+    <p class="intro">Below, the seven passages of the worked example appear as four paragraphs, in the form that they would take in the introduction of the thesis.</p>
+    <div class="essay">
+      <h3>Introduction</h3>
+      <p>Several global brands have withdrawn from initiatives such as Diversity, Equity, and Inclusion (DEI) in recent years, in what Scalvini (2026, pp. 2, 23) calls the “post-2022 DEI retrenchment”. These withdrawals concern advertising directly, since marketing “simultaneously enables the visibility and erasure” of feminist and Black social justice activist issues (Sobande, 2020, p. 2723). In this thesis, I ask how four beauty brands represented women in the posts that they published on Instagram for International Women’s Day in 2022 and in 2025. I examine which women appear in these posts before and after the retrenchment, and on what terms they appear.</p>
+      <p>Studies of brand activism have asked whether campaigns are authentic, and Vredenburg et al. (2020, p. 444) describe authentic brand activism as the match of “activist messaging, purpose, and values with prosocial corporate practice”. In a critical study of “femvertising”, Sobande (2020, p. 2723) identifies the “racialised and gendered subject positions” that brands use in this advertising. A significant gap remains, however, in the study of femvertising after the retrenchment, since both studies were published in 2020 and analyse earlier campaigns. In the conclusion of his article, Scalvini (2026, p. 24) calls for longitudinal research “tracking the consequences of the post-2022 DEI retrenchment”.</p>
+      <p>The originality of the thesis is that I compare the posts of the same brands before and after the retrenchment, so that any change in the representation of women becomes observable. The comparison is also relevant to advertising practice, since practitioners can use it to see whether the withdrawal from DEI changes the campaigns that they produce. My objective is to extend the distinction between “political recognition and regulatory recognition” (Scalvini, 2026, p. 3) to femvertising after the retrenchment. I therefore examine whether the brands address women as “political claimants” or as “objects of empathy” (Scalvini, 2026, p. 23).</p>
+      <p>In Chapter 2, I set out the studies of femvertising and the theory of recognition. In Chapter 3, I explain how I selected the posts and how I apply semiotic analysis to their images and captions. In Chapter 4, I present and discuss the findings, and in Chapter 5, I state my conclusions and the limits of the thesis.</p>
+      <span class="lab">References</span>
+      <ul class="refs">
+        <li>Scalvini M (2026) Brand governance in the platform economy: From political to regulatory recognition. <i>New Media &amp; Society</i>. <a href="https://doi.org/10.1177/14614448261475463">https://doi.org/10.1177/14614448261475463</a></li>
+        <li>Sobande F (2020) Woke-washing: &ldquo;intersectional&rdquo; femvertising and branding &ldquo;woke&rdquo; bravery. <i>European Journal of Marketing</i> 54(11): 2723-2745. <a href="https://doi.org/10.1108/EJM-02-2019-0134">https://doi.org/10.1108/EJM-02-2019-0134</a></li>
+        <li>Vredenburg J, Kapitan S, Spry A and Kemper JA (2020) Brands taking a stand: Authentic brand activism or woke washing? <i>Journal of Public Policy &amp; Marketing</i> 39(4): 444-460. <a href="https://doi.org/10.1177/0743915620947359">https://doi.org/10.1177/0743915620947359</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" aria-labelledby="h-yours" id="your-introduction">
+    <h2 id="h-yours">Your introduction</h2>
+    <p class="intro">Your drafts appear below in the order of the seven steps, so that you can read the introduction as a whole before you copy it into your thesis.</p>
+    <div class="sheet">
+      <div class="outline" id="outline"></div>
+      <div class="acts">
+        <button class="btn solid" type="button" id="o-copy">Copy my introduction</button>
+        <button class="btn" type="button" id="o-dl">Download as text</button>
+        <button class="btn" type="button" id="o-clear">Clear all drafts</button>
+      </div>
+      <p class="status" id="status" aria-live="polite"></p>
+      <p class="remind">The page does not save your drafts, so copy or download them before you close or reload the page.</p>
+    </div>
+    <div class="methodbox"><b>Before you move on</b>
+      <p>Read your introduction against the seven questions on this page, and check that your draft answers each of them. Keep the wording of your research question, since you will answer it in the same words in your discussion and in your conclusion.</p>
+    </div>
+    <p class="hint">For complete examples, you can read the introductions of thirty-one master&rsquo;s dissertations on the <a href="https://scalvini.eu/teaching-tools/dissertation-examples/">Dissertation Examples</a> page.</p>
+  </section>
+
+  <footer>
+    <span>Built on 9 October 2026 from my guidelines for the thesis, with links checked on the same day.</span>
+    <span>Scalvini M (2026) Brand governance in the platform economy: From political to regulatory recognition. <i>New Media &amp; Society</i>. <a href="https://doi.org/10.1177/14614448261475463">https://doi.org/10.1177/14614448261475463</a></span>
+    <span>Academic Phrasebank, University of Manchester. <a href="https://www.phrasebank.manchester.ac.uk/">https://www.phrasebank.manchester.ac.uk/</a></span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  const STEPS = [{n:1,title:"Motivation"},{n:2,title:"Thesis question"},{n:3,title:"Literature review"},{n:4,title:"Gap in the literature"},{n:5,title:"Relevance and originality"},{n:6,title:"Objective"},{n:7,title:"Expectations"}];
+  const REPO = true;
+  const $ = (id) => document.getElementById(id);
+  const boxes = STEPS.map((s) => $("draft-" + s.n));
+
+  function drafts() { return boxes.map((b) => b.value.trim()); }
+
+  function render() {
+    const d = drafts();
+    const done = d.filter(Boolean).length;
+    $("count").innerHTML = "<b>" + done + "</b> of 7 steps drafted";
+    STEPS.forEach((s, i) => { $("chip-" + s.n).classList.toggle("done", !!d[i]); });
+    const out = $("outline");
+    out.textContent = "";
+    STEPS.forEach((s, i) => {
+      const item = document.createElement("div");
+      item.className = "oitem";
+      const h = document.createElement("h3");
+      const num = document.createElement("span");
+      num.className = "mono";
+      num.textContent = String(s.n);
+      h.append(num, document.createTextNode(s.title));
+      const p = document.createElement("p");
+      if (d[i]) { p.textContent = d[i]; } else { p.className = "empty"; p.textContent = "Not drafted yet"; }
+      item.append(h, p);
+      out.append(item);
+    });
+  }
+
+  function asText() {
+    const d = drafts();
+    const parts = ["Introduction"];
+    STEPS.forEach((s, i) => { parts.push(s.n + ". " + s.title + "\n" + (d[i] || "[not drafted yet]")); });
+    return parts.join("\n\n") + "\n";
+  }
+
+  function say(msg) { $("status").textContent = msg; }
+
+  // Add a phrase to the draft of its step, then select the first [placeholder] so that the student can type over it.
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-insert]");
+    if (!b) return;
+    const ta = $(b.dataset.target);
+    const cur = ta.value;
+    const sep = cur && !/\s$/.test(cur) ? " " : "";
+    const start = cur.length + sep.length;
+    ta.value = cur + sep + b.dataset.insert;
+    ta.focus();
+    const i = ta.value.indexOf("[", start);
+    const j = i >= 0 ? ta.value.indexOf("]", i) : -1;
+    if (i >= 0 && j > i) ta.setSelectionRange(i, j + 1);
+    else ta.setSelectionRange(ta.value.length, ta.value.length);
+    render();
+  });
+
+  boxes.forEach((b) => b.addEventListener("input", render));
+
+  $("o-copy").addEventListener("click", () => {
+    const text = asText();
+    const fallback = () => {
+      const t = document.createElement("textarea");
+      t.value = text; t.setAttribute("readonly", ""); t.style.position = "fixed"; t.style.opacity = "0";
+      document.body.append(t); t.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+      t.remove();
+      if (ok) { say("Copied. You can paste your introduction into your thesis."); return; }
+      const r = document.createRange(); r.selectNodeContents($("outline"));
+      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      say("Your browser blocked copying, so the text is selected. Copy it with your keyboard.");
+    };
+    try {
+      navigator.clipboard.writeText(text).then(
+        () => say("Copied. You can paste your introduction into your thesis."),
+        fallback
+      );
+    } catch (err) { fallback(); }
+  });
+
+  if (REPO && $("o-dl")) {
+    $("o-dl").addEventListener("click", () => {
+      const blob = new Blob([asText()], { type: "text/plain;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "introduction-draft.txt";
+      document.body.append(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      say("Downloaded as introduction-draft.txt.");
+    });
+  }
+
+  // Clearing asks for a second click on the same button, because the page cannot show a dialog.
+  let armed = null;
+  $("o-clear").addEventListener("click", (e) => {
+    const btn = e.currentTarget;
+    if (!armed) {
+      btn.textContent = "Click again to clear all drafts";
+      btn.classList.add("warn");
+      armed = setTimeout(() => { armed = null; btn.textContent = "Clear all drafts"; btn.classList.remove("warn"); }, 4000);
+      return;
+    }
+    clearTimeout(armed); armed = null;
+    boxes.forEach((b) => { b.value = ""; });
+    btn.textContent = "Clear all drafts"; btn.classList.remove("warn");
+    render();
+    say("All drafts cleared.");
+  });
+
+  if (REPO) {
+    window.addEventListener("beforeunload", (e) => {
+      if (drafts().some(Boolean)) { e.preventDefault(); e.returnValue = ""; }
+    });
+  }
+
+  // Keep drafts when the page is updated in a viewer that supports it.
+  const hot = window.claude && window.claude.hot;
+  if (hot && hot.snapshot) hot.snapshot(() => ({ drafts: boxes.map((b) => b.value) }));
+  const start = (data) => {
+    if (data && Array.isArray(data.drafts)) data.drafts.forEach((v, i) => { if (boxes[i] && typeof v === "string") boxes[i].value = v; });
+    render();
+  };
+  if (hot && hot.ready) hot.ready(start); else start((hot && hot.data) || {});
+})();
+</script>
+</body>
+</html>
